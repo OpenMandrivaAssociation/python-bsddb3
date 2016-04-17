@@ -1,6 +1,6 @@
-Name:           python3-bsddb3
+Name:           python-bsddb3
 Version:        6.1.1
-Release:        %mkrel 1
+Release:        1
 Summary:        Python 3 bindings for BerkleyDB
 Group:          Development/Python
 
@@ -11,6 +11,7 @@ Source0:        https://pypi.python.org/packages/source/b/bsddb3/bsddb3-%{versio
 Requires:       python(abi) >= 3.0
 BuildRequires:  python3-devel
 BuildRequires:  db-devel
+%rename python3-bsddb3
 
 %description
 This package contains Python wrappers for Berkeley DB, the Open Source embedded
