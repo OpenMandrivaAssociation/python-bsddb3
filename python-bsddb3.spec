@@ -22,9 +22,12 @@ of any length.
 %setup -q -n bsddb3-%{version}
 
 %build
+export YES_I_HAVE_THE_RIGHT_TO_USE_THIS_BERKELEY_DB_VERSION=1
 %__python3 setup.py build
 
 %install
+export YES_I_HAVE_THE_RIGHT_TO_USE_THIS_BERKELEY_DB_VERSION=1
+
 %__python3 setup.py install --skip-build --root=%{buildroot}
 # Get rid of unneeded header
 rm -f %{buildroot}%{_includedir}/python3.?m/bsddb3/bsddb.h
