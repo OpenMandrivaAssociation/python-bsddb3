@@ -1,12 +1,12 @@
 Name:           python-bsddb3
-Version:        6.1.1
+Version:        6.2.6
 Release:        1
 Summary:        Python 3 bindings for BerkleyDB
 Group:          Development/Python
 
 License:        BSD
 URL:            https://pypi.python.org/pypi/bsddb3/
-Source0:        https://pypi.python.org/packages/source/b/bsddb3/bsddb3-%{version}.tar.gz
+Source0:        https://files.pythonhosted.org/packages/e9/fc/ebfbd4de236b493f9ece156f816c21df0ae87ccc22604c5f9b664efef1b9/bsddb3-%{version}.tar.gz
 
 Requires:       python(abi) >= 3.0
 BuildRequires:  python3-devel
