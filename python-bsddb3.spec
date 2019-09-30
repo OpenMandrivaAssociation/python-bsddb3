@@ -33,7 +33,7 @@ chmod 0755 %{buildroot}%{python3_sitearch}/bsddb3/{dbshelve.py,tests/test_dbtabl
 # fix shebangs
 %{_bindir}/pathfix.py -i %{__python3} -p -n %{buildroot}%{python3_sitearch}/bsddb3/
 
-%files -n python3-bsddb3
+%files
 %doc ChangeLog PKG-INFO README.txt LICENSE.txt
 %{python3_sitearch}/bsddb3/
 %{python3_sitearch}/bsddb3-%{version}-py?.?.egg-info
