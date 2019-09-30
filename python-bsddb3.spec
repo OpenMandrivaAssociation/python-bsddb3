@@ -6,7 +6,7 @@ Group:          Development/Python
 
 License:        BSD
 URL:            https://pypi.python.org/pypi/bsddb3/
-Source0:        https://files.pythonhosted.org/packages/e9/fc/ebfbd4de236b493f9ece156f816c21df0ae87ccc22604c5f9b664efef1b9/bsddb3-%{version}.tar.gz
+Source0:        https://pypi.python.org/packages/source/b/bsddb3/bsddb3-%{version}.tar.gz
 
 Requires:       python(abi) >= 3.0
 BuildRequires:  python3-devel
@@ -22,22 +22,18 @@ of any length.
 %setup -q -n bsddb3-%{version}
 
 %build
-export YES_I_HAVE_THE_RIGHT_TO_USE_THIS_BERKELEY_DB_VERSION=1
-%__python3 setup.py build
+%py_build
 
 %install
-export YES_I_HAVE_THE_RIGHT_TO_USE_THIS_BERKELEY_DB_VERSION=1
+%py_install
 
-%__python3 setup.py install --skip-build --root=%{buildroot}
-# Get rid of unneeded header
-rm -f %{buildroot}%{_includedir}/python3.?m/bsddb3/bsddb.h
 # Make all scripts executable
 chmod 0755 %{buildroot}%{python3_sitearch}/bsddb3/{dbshelve.py,tests/test_dbtables.py}
 
-%check
-#{__python3} test.py
+# fix shebangs
+%{_bindir}/pathfix.py -i %{__python3} -p -n %{buildroot}%{python3_sitearch}/bsddb3/
 
-%files 
+%files -n python3-bsddb3
 %doc ChangeLog PKG-INFO README.txt LICENSE.txt
 %{python3_sitearch}/bsddb3/
-%{python3_sitearch}/bsddb3-%{version}-py3.?.egg-info
+%{python3_sitearch}/bsddb3-%{version}-py?.?.egg-info
