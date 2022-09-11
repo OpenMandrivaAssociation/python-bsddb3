@@ -34,3 +34,4 @@ of any length.
 %doc ChangeLog PKG-INFO README.txt LICENSE.txt
 %{python3_sitearch}/bsddb3/
 %{python3_sitearch}/bsddb3-%{version}-py*.*.egg-info
+%{_includedir}/python*.*/bsddb3/bsddb.h
