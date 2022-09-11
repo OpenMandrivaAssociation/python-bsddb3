@@ -22,7 +22,7 @@ of any length.
 %setup -q -n bsddb3-%{version}
 
 %build
-%py3_build
+%py3_build --berkeley-db=/usr
 
 %install
 %py3_install
