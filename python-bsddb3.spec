@@ -11,6 +11,7 @@ Requires:       python
 BuildRequires:  pkgconfig(python)
 BuildRequires:  python3dist(setuptools)
 #BuildRequires:  db-devel
+# Max 53 is supported, do not use greater version.
 BuildRequires:  db53-devel
 BuildRequires:  glibc
 %rename python3-bsddb3
@@ -32,4 +33,4 @@ of any length.
 %files 
 %doc ChangeLog PKG-INFO README.txt LICENSE.txt
 %{python3_sitearch}/bsddb3/
-%{python3_sitearch}/bsddb3-%{version}-py3.?.egg-info
+%{python3_sitearch}/bsddb3-%{version}-py*.*.egg-info
