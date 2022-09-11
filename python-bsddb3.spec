@@ -10,7 +10,8 @@ Source0:        https://pypi.python.org/packages/source/b/bsddb3/bsddb3-%{versio
 Requires:       python
 BuildRequires:  pkgconfig(python)
 BuildRequires:  python3dist(setuptools)
-BuildRequires:  db-devel
+#BuildRequires:  db-devel
+BuildRequires:  db53-devel
 %rename python3-bsddb3
 
 %description
