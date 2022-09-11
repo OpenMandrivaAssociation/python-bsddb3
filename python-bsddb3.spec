@@ -12,6 +12,7 @@ BuildRequires:  pkgconfig(python)
 BuildRequires:  python3dist(setuptools)
 #BuildRequires:  db-devel
 BuildRequires:  db53-devel
+BuildRequires:  glibc
 %rename python3-bsddb3
 
 %description
