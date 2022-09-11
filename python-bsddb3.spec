@@ -24,7 +24,7 @@ of any length.
 %setup -q -n bsddb3-%{version}
 
 %build
-python3 setup.py --berkeley-db=/usr build
+%py_build
 
 %install
 %py3_install
