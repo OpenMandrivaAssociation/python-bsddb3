@@ -1,6 +1,6 @@
 Name:           python-bsddb3
 Version:        6.2.9
-Release:        3
+Release:        4
 Summary:        Python 3 bindings for BerkleyDB
 Group:          Development/Python
 License:        BSD
